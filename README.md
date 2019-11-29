@@ -61,7 +61,25 @@ to persist for some time, possibly only when it was '0'.  Do not rely
 on the description to be empty or see testing/test_parameter_storage
 for how to handle this.
 
+## Dockerised
 
+When running this tool in docker use the following command to build the image :
+
+```sh
+make build-docker
+```
+
+next, the environment variable for the AWS user
+```sh
+AWS_ACCESS_KEY_ID=""
+AWS_DEFAULT_REGION=us-east-1
+AWS_SECRET_ACCESS_KEY=""
+```
+
+Finally, create a backup of SSM using:
+```
+make run-docker
+```
 ## Development
 
 We aim to use Behavior Driven Development to encourage reasonable feature descriptions and a level of tests appropriate for the business functionality included here.  Test Driven Development and to some extent Test Driven Design are encouraged in order to improve testability and eas of modification of the code.
