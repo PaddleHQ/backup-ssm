@@ -63,23 +63,24 @@ for how to handle this.
 
 ## Dockerised
 
-When running this tool in docker use the following command to build the image :
+When running this tool in docker, use the following command to build the image :
 
 ```sh
 make build-docker
 ```
 
-next, the environment variable for the AWS user
+Next, set the environment variable for the desired AWS user. Note, the user must have read permissions to `System Manager's Parameter Store.`
 ```sh
-AWS_ACCESS_KEY_ID=""
-AWS_DEFAULT_REGION=us-east-1
-AWS_SECRET_ACCESS_KEY=""
+export AWS_ACCESS_KEY_ID=""
+export AWS_DEFAULT_REGION=us-east-1
+export AWS_SECRET_ACCESS_KEY=""
 ```
 
 Finally, create a backup of SSM using:
 ```
 make run-docker
 ```
+
 ## Development
 
 We aim to use Behavior Driven Development to encourage reasonable feature descriptions and a level of tests appropriate for the business functionality included here.  Test Driven Development and to some extent Test Driven Design are encouraged in order to improve testability and eas of modification of the code.
