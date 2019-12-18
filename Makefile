@@ -1,5 +1,4 @@
-AWS_ACCOUNT_NAME ?= michael
-AWS_DEFAULT_REGION ?= eu-west-1
+AWS_DEFAULT_REGION ?= eu-east-1
 PYTHON ?= python3
 BEHAVE ?= behave
 KEYFILE ?=.anslk_random_testkey

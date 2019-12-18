@@ -27,7 +27,7 @@ so after restoring.
 
 ## Using python interface
 
-The backup and restore functions are provided as a libray.  For backup
+The backup and restore functions are provided as a library.  For backup
 
     import backup_aws_ssm
     backup_aws_ssm.backup_to_file("myfile")
@@ -43,7 +43,7 @@ this will work.
 ## Using python ssm library
 
 Included in the package is a library which provides a dict object
-which accesses SSM parameter store.  This will likely, later, be split out into a separate packge.  In the meantime it can be used in Alpha testing mode.
+which accesses SSM parameter store.  This will likely, later, be split out into a separate package.  In the meantime it can be used in Alpha testing mode.
 
       from backup_cloud_ssm.aws_ssm_dict import aws_ssm_dict
       ssm_dict = aws_ssm_dict()
