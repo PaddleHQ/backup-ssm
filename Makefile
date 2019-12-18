@@ -1,4 +1,4 @@
-AWS_DEFAULT_REGION ?= eu-east-1
+AWS_DEFAULT_REGION ?= us-east-1
 PYTHON ?= python3
 BEHAVE ?= behave
 KEYFILE ?=.anslk_random_testkey
