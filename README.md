@@ -88,7 +88,7 @@ To restore, make sure the correct AWS environment variables are set and run:
 `SOURCE_ABSOLUTE_PATH` - This is the absolute path to the file containing the SSM credentials
 
 ```sh
-SOURCE_ABSOLUTE_PATH="/Users/leonsilcott/Workspace/backup-ssm/ssm-backup-YYYY-MM-ddTHHmmss/ssm-backup-YYYY-MM-ddTHHmmss.txt" make run-docker-restore
+SOURCE_ABSOLUTE_PATH="" make run-docker-restore
 ```
 
 ## Development
