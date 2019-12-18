@@ -27,7 +27,7 @@ so after restoring.
 
 ## Using python interface
 
-The backup and restore functions are provided as a libray.  For backup
+The backup and restore functions are provided as a library.  For backup
 
     import backup_aws_ssm
     backup_aws_ssm.backup_to_file("myfile")
@@ -43,7 +43,7 @@ this will work.
 ## Using python ssm library
 
 Included in the package is a library which provides a dict object
-which accesses SSM parameter store.  This will likely, later, be split out into a separate packge.  In the meantime it can be used in Alpha testing mode.
+which accesses SSM parameter store.  This will likely, later, be split out into a separate package.  In the meantime it can be used in Alpha testing mode.
 
       from backup_cloud_ssm.aws_ssm_dict import aws_ssm_dict
       ssm_dict = aws_ssm_dict()
@@ -61,6 +61,35 @@ to persist for some time, possibly only when it was '0'.  Do not rely
 on the description to be empty or see testing/test_parameter_storage
 for how to handle this.
 
+## Dockerised
+
+When running this tool in docker, use the following command to build the image :
+
+```sh
+make build-docker
+```
+
+Next, set the environment variable for the desired AWS user. Note, the user must have read permissions to `System Manager's Parameter Store.`
+```sh
+export AWS_ACCESS_KEY_ID=""
+export AWS_DEFAULT_REGION=us-east-1
+export AWS_SECRET_ACCESS_KEY=""
+```
+
+Finally, create a backup of SSM using:
+```sh
+make run-docker-backup
+```
+
+### `RESTORE`
+
+To restore, make sure the correct AWS environment variables are set and run:
+
+`SOURCE_ABSOLUTE_PATH` - This is the absolute path to the file containing the SSM credentials
+
+```sh
+SOURCE_ABSOLUTE_PATH="" make run-docker-restore
+```
 
 ## Development
 
